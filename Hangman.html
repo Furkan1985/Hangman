@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Hangman.js">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<html>
+    <body>
+
+        <h1>     
+HANGMAN
+        </h1>
+
+
+<button id="configure" onclick="game.config()">
+    <h1>
+        CONFIGURE
+    </h1>
+</button>
+
+<div id="game" style="display: none;">
+        <div class="container">
+            <div class="search" id="search">
+            </div>
+        </div>
+        <p>
+            Versuche für Spieler <span id="player">...</span>: <span id="versuche">0</span>
+        </p>
+        <form id="Paul" onsubmit="game.save(event)">
+            <input id="Input">
+            <input type="submit">
+          </form>
+          <div id="end" style="visibility: hidden;">
+            <div>
+                Winner:
+                <span id="winner">
+                    ...
+                </span>
+              </div>
+        <button id="restart" onclick="game.restart()">
+            <h1>
+                RESTART
+            </h1>
+        </button>
+          </div>
+</div>
+
+<div id="setup"  style="visibility: hidden;">
+    <button id="start" onclick="game.start()">
+        <h1>
+            CLICK TO PLAY
+        </h1>
+    </button>
+   <h2>
+    Player: 
+   </h2> 
+   <ol id="playerList">
+
+   </ol>
+    <form onsubmit="game.newPlayer(event)">
+<input id="name">
+<input type="submit" value="Hinzufuegen">
+    </form>
+</div>
+
+
+<style>
+    div#search {
+    margin: 15px;
+}
+
+div#search span {
+    font-size: 40px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    width: 30px;
+    height: 41px;
+    line-height: 40px;
+    text-align: center;
+    font-family: fangsong;
+}
+</style>
+    </body>
+</html>
